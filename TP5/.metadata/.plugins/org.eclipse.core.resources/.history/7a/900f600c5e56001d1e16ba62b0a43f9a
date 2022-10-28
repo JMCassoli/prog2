@@ -1,0 +1,12 @@
+package tp5;
+
+class Main {
+
+	public static void main(String[] args) {
+		PilaElementos pila = new PilaElementos();
+		pila.push("hola");
+		System.out.println(pila);
+
+	}
+
+}

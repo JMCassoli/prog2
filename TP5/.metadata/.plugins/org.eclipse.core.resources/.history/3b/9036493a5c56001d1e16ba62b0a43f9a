@@ -1,0 +1,26 @@
+package tp5;
+
+import java.util.ArrayList;
+
+public class PilaElementos {
+
+	private ArrayList<Object> elementos;
+	
+	public PilaElementos() {
+		elementos = new ArrayList<>();
+	}
+	
+	public void push(Object o) {
+		
+		elementos.add(o);
+		
+	}
+	
+	public Object pop() {
+		if(elementos.size() != 0) {return null;}
+		return elementos.remove(elementos.size() - 1);
+	}
+	
+	
+	
+}
