@@ -4,12 +4,12 @@ public class Main {
 	public static void main(String[] args) {
 		Hogwarts hogwarts = new Hogwarts();
 		
-		Casa casa1 = new Casa("Gryffindor", 2);
+		CasaPura casa1 = new CasaPura("Gryffindor", 2);
 		casa1.agregarCualidad("facha");
 		casa1.agregarCualidad("ludopata");
 		casa1.agregarCualidad("pobre");
 		
-		CasaPura casa2 = new CasaPura("Slytherin", 3);
+		CasaEnemistada casa2 = new CasaEnemistada("Slytherin", 3, casa1);
 		casa2.agregarCualidad("facha");
 		casa2.agregarCualidad("ludopata");
 		casa2.agregarCualidad("rico");
@@ -34,7 +34,7 @@ public class Main {
 		alumno1.agregarCualidad("ludopata");
 		alumno1.agregarCualidad("rico");
 		alumno1.agregarCualidad("pobre");
-		alumno1.agregarFamiliar(alumno3);
+		alumno1.agregarFamiliar(alumno2);
 		
 		hogwarts.asignarCasa(alumno1);
 	}

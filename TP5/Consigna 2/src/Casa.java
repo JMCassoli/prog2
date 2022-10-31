@@ -5,7 +5,7 @@ public class Casa {
 	private String nombre;
 	private int max_alumnos;
 	private ArrayList<String> cualidades;
-	private ArrayList<Alumno> alumnos;
+	protected ArrayList<Alumno> alumnos;
 	
 	public Casa (String nombre, int capacidad) {
 		this.nombre=nombre;

@@ -19,7 +19,7 @@ public class CasaPura extends Casa {
 	private boolean tieneLinaje(ArrayList<Alumno> familiares) {
 		if(!familiares.isEmpty()) {
 			for(Alumno familiar : familiares) {
-				if(familiares.contains(familiar)) {
+				if(this.alumnos.contains(familiar)) {
 					return true;
 				}
 			}

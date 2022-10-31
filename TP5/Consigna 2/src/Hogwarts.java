@@ -35,6 +35,10 @@ public class Hogwarts {
 		}
 	}
 	
+	public ArrayList<Casa> getCasas() {
+		return new ArrayList<Casa>(casas);
+	}
+
 	public void agregarCasa(Casa casa) {
 		if(!casas.contains(casa)) {
 			this.casas.add(casa);			
