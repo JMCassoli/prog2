@@ -9,7 +9,7 @@ public class Main {
 		casa1.agregarCualidad("ludopata");
 		casa1.agregarCualidad("pobre");
 		
-		Casa casa2 = new Casa("Slytherin", 3);
+		CasaPura casa2 = new CasaPura("Slytherin", 3);
 		casa2.agregarCualidad("facha");
 		casa2.agregarCualidad("ludopata");
 		casa2.agregarCualidad("rico");
@@ -25,7 +25,7 @@ public class Main {
 		
 		Alumno alumno1 = new Alumno("Sergio" , null);
 		Alumno alumno2 = new Alumno("Carlos" , casa1);
-		Alumno alumno3 = new Alumno("Jorge" , casa1);
+		Alumno alumno3 = new Alumno("Jorge" , casa2);
 		
 		casa1.agregarAlumno(alumno2);
 		casa2.agregarAlumno(alumno3);
@@ -34,6 +34,7 @@ public class Main {
 		alumno1.agregarCualidad("ludopata");
 		alumno1.agregarCualidad("rico");
 		alumno1.agregarCualidad("pobre");
+		alumno1.agregarFamiliar(alumno3);
 		
 		hogwarts.asignarCasa(alumno1);
 	}

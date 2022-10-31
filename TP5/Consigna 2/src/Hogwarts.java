@@ -10,6 +10,10 @@ public class Hogwarts {
 	}
 	
 	public void asignarCasa(Alumno alumno) {
+		if(alumno.getCasaActual()!=null) {
+			System.out.println("el alumno ya pertenece a una casa");
+			return;
+		}
 		ArrayList<Casa> compatibles = new ArrayList<>();
 		for(Casa casa : casas) {
 			if(casa.aceptaAlumno(alumno)) {
@@ -21,10 +25,12 @@ public class Hogwarts {
 		}else if (compatibles.size()==1) {
 			Casa casa = compatibles.get(0);
 			casa.agregarAlumno(alumno);
+			alumno.setCasaActual(casa);
 			System.out.println("el alumno fue asignado a la casa : " + casa.getNombre());
 		}else {
 			Casa casa = compatibles.get((int)(Math.random()*compatibles.size()));
 			casa.agregarAlumno(alumno);
+			alumno.setCasaActual(casa);
 			System.out.println("el alumno fue asignado por sorteo a la casa : " + casa.getNombre());
 		}
 	}
